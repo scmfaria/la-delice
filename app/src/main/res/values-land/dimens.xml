@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="font_size_title">40sp</dimen>
+    <dimen name="font_size_subTitle">16sp</dimen>
+    <dimen name="font_size_text">14sp</dimen>
+
+    <dimen name="app_bar_height">90dp</dimen>
+    <dimen name="app_bar_land_height">100dp</dimen>
+
+    <dimen name="nav_header_height">180dp</dimen>
+    <dimen name="nav_header_margin_right">200dp</dimen>
+
+    <dimen name="margin_default">16dp</dimen>
+    <dimen name="margin_visible_list_menu">-110dp</dimen>
+
+    <dimen name="card_height">420dp</dimen>
+    <dimen name="padding_card">8dp</dimen>
+    <dimen name="image_card_height">140dp</dimen>
+
+    <dimen name="carousel_view_height">200dp</dimen>
+    <dimen name="radius_size_carousel_view">8dp</dimen>
+
+    <dimen name="image_description_height">180dp</dimen>
+
+</resources>

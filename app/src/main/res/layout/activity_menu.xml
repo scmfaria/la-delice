@@ -1,0 +1,128 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/padding_card"
+        android:transitionName="card"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="8dp">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/carousel_view_height">
+
+                    <com.synnapps.carouselview.CarouselView
+                        android:id="@+id/carouselView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/carousel_view_height"
+                        android:transitionName="@string/item_image"
+                        app:fillColor="#FFFFFFFF"
+                        app:pageColor="#00000000"
+                        app:radius="@dimen/radius_size_carousel_view"
+                        app:slideInterval="3000"
+                        app:strokeColor="#FF777777"
+                        app:strokeWidth="1dp" />
+
+                    <ImageView
+                        android:id="@+id/ivClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_default"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_close"
+                        android:clickable="true" />
+
+                    <TextView
+                        android:id="@+id/tvProgressLoadImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/font_size_subTitle"
+                        android:paddingRight="@dimen/margin_default"
+                        android:paddingLeft="@dimen/margin_default"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:background="@drawable/shape_container"
+                        android:visibility="gone"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_default"
+                    android:paddingRight="@dimen/margin_default"
+                    android:paddingTop="@dimen/margin_default"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textSize="@dimen/font_size_subTitle"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:transitionName="@string/item_title"/>
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="12"
+                    android:padding="@dimen/margin_default"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/font_size_text"
+                    android:transitionName="@string/item_description"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/image_description_height"
+                    android:padding="@dimen/margin_default">
+
+                    <ImageView
+                        android:id="@+id/ivDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/image_description_height"
+                        android:scaleType="centerCrop"
+                        android:transitionName="image" />
+
+                    <TextView
+                        android:id="@+id/tvProgressLoadImageDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/font_size_subTitle"
+                        android:paddingRight="@dimen/margin_default"
+                        android:paddingLeft="@dimen/margin_default"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:background="@drawable/shape_container"
+                        android:visibility="gone"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>
+
+
+
